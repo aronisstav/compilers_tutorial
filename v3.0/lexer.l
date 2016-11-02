@@ -14,5 +14,5 @@
 <<EOF>>      { return 0; }
 [0-9]+       { yylval = atoi(yytext);
                return NUM; }
-[\+\-\*\n]   { return yytext[0]; }
+[\+\-\*\n()] { return yytext[0]; }
 [[:space:]]  { /* nothing */ }
